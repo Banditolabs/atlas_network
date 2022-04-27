@@ -9,8 +9,8 @@ const Mission = require("../models/mission")
 const actions = {}
 
 // INDEX
-actions.index =  async (req, res) => {
-    await Mission.find({}, (err, allMissions) => {
+actions.index = (req, res) => {
+     Mission.find({}, (err, allMissions) => {
         console.log(err)
         res.render('index.ejs', {missions: allMissions})
     })}
@@ -45,20 +45,20 @@ actions.create = (req,res) => {
 }
 
 // SHOW
-actions.show = async (req,res) => {
-    await Mission.findById(req.params.id, (err, mission) => {
+actions.show =  (req,res) => {
+     Mission.findById(req.params.id, (err, mission) => {
         res.render("show.ejs", {mission})
     })
 }
 
 // EDIT
-actions.edit = async (req,res) => {
-    await Mission.findById(req.params.id, (err, mission) => {
+actions.edit =  (req,res) => {
+     Mission.findById(req.params.id, (err, mission) => {
         res.render("edit.ejs", {mission})
     })
 }
 // UPDATE
-actions.update = async (req,res) => {
+actions.update =  (req,res) => {
     let updatedMission = {
         target: req.body.target,
         description: req.body.description,
@@ -86,7 +86,7 @@ actions.update = async (req,res) => {
     // Look up by Id
     // Edit it with the stuff but only the valid inputs from req.body
     // FindByIDAndUpdate will only replace the limited scope of items
-    await Mission.findByIdAndUpdate(req.params.id, req.body, { new: true, overwrite: true }, (err) => {
+     Mission.findByIdAndUpdate(req.params.id, req.body, { new: true, overwrite: true }, (err) => {
         console.log(err)
         res.redirect(`/missions/${req.params.id}`)
     })
@@ -99,8 +99,9 @@ actions.delete =  (req,res) => {
     }) 
 }
 // SEED
-actions.seed = async (req,res) => {
-    await Mission.remove({})
+// 
+actions.seed =  async (req,res) => {
+     Mission.remove({})
     const mission = await Mission.create([
         {
             target: "Lord Timmy",
