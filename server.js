@@ -42,7 +42,9 @@ app.use("/missions", missionsController)
 // *********************************
 // Routes that Render Pages with EJS
 // *********************************
-
+app.get("/", (req,res) => {
+    res.redirect("/missions")
+})
 // *********************************
 // API Routes that Return JSON
 // *********************************
