@@ -62,4 +62,4 @@ db.on('error', (err) => console.log( err.message + "is mongo not running?"))
 db.on('connected', () => console.log('mongoose connected'))
 db.on('disconnected', () => console.log ("mongo disconnected"))
 
-app.listen(PORT || 3000, () => console.log())
+app.listen(PORT, () => console.log())
