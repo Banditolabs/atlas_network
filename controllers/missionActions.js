@@ -32,7 +32,9 @@ actions.create = (req,res) => {
         payout: req.body.payout,
         informants: [req.body.informants],
         weapons: [req.body.weapons],
-        stealth_requirement: req.body.stealth_requirement
+        stealth_requirement: req.body.stealth_requirement,
+        completed: !!req.body.completed
+
     }
     Mission.create(newMission, (err, newMission) => {
         if (err) {
@@ -69,7 +71,7 @@ actions.update =  (req,res) => {
         informants: [req.body.informants],
         weapons: [req.body.weapons],
         stealth_requirement: req.body.stealth_requirement,
-        completed: req.body.completed
+        completed: !!req.body.completed
     }
     console.log(req.body)
     // secondary

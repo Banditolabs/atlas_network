@@ -4,22 +4,26 @@
 
 <body>
     <div>
-        <h1><%=mission.target%></h1>
-        <h3>Your mission: <%=mission.description%></h3>
-        <a href="/missions"><button type="button">Back to the board</button></a>
-    </div>        
-            <div class="wanted-image">
-                <div class="">
+        
+        <div class="item-header">
+            <h1><%=mission.target%></h1>
+            <h3>Your mission: <%=mission.description%></h3>
+            <a href="/missions"><button type="button">Back to the board</button></a>
+        </div>        
+            <div class="centering-container">
+                <div class="item-details">
                     <img class="item-img" src="<%=mission.image%>">
-                    <h3><%=mission.description%></h3>
+                    <h3><%=mission.location%></h3>
                     <div> Completed: <%=mission.completed %></div>
                 </div>
             </div>
-    <div class="page-control">
-        <a href="/missions/<%=mission._id%>/edit"><button type="button">Edit Mission</button></a>
+        <div class="page-controls">
+            <a class="control-item" href="/missions/<%=mission._id%>/edit"><button type="button">Edit Mission</button></a>
+        
+            <form class="control-item" action="/missions/<%=mission._id%>?_method=DELETE" method="post">
+                <input type="submit" value="Archive Mission">
+            </form>
+        </div>
     </div>
-    <form action="/missions/<%=mission._id%>?_method=DELETE" method="post">
-        <input type="submit" value="Archive Mission">
-    </form>
 </body>
 </html>

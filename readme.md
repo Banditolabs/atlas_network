@@ -23,3 +23,8 @@
 | Informants   | Array       |
 | Weapons   | Array        |
 | Stealth_Requirement | Boolean     |
+
+![Index Page](assets/INDEX.png)
+![Show Page](assets/SHOW.png)
+![Edit Page](assets/EDIT.png)
+![New Page] (assets/NEW.png)
