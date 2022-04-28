@@ -27,4 +27,4 @@
 ![Index Page](public/assets/INDEX.png)
 ![Show Page](public/assets/SHOW.png)
 ![Edit Page](public/assets/EDIT.png)
-![New Page] (assets/NEW.png)
+![New Page] (public/assets/NEW.png)
