@@ -1,5 +1,5 @@
 
-(Live Site)[https://atlas-network.herokuapp.com/]
+(Live Site) [https://atlas-network.herokuapp.com/]
 ## Routes of the application
 | Name      | Endpoint | HTTP Method |
 | ----------- | ----------- | ----------- |
