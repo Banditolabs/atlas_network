@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs") %>
+
+<body>
+    <form action="/missions" method="post">
+        <input type="text" name="target" placeholder="Target Name"></br>
+        <input type="text" name="description" placeholder="Mission Description"></br>
+        <input type="text" name="image" value="/public/assets/"></br>
+        <input type="text" name="status" placeholder="Status of Target"></br>
+        <input type="text" name="location" placeholder="Location of Target"></br>
+        <input type="number" name="payout" placeholder="Enter Payout Amount"></br>
+        <label for="Stealh Requirement">Stealth Required:
+            <input type="checkbox" name="stealth_requirement" placeholder="Stealth">
+        </label>
+        <label for="completed">Mission Completed
+            <input type="checkbox" name="completed"></br>
+        </label>
+        <input type="submit" value="submit">
+    </form>
+    <div>
+        <h4>Available Avatars</h4>
+        <ul>
+            <li>avataaars (1).png</li>
+            <li>avataaars (2).png</li>
+            <li>avataaars (3).png</li>
+            <li>avataaars.png</li>
+            <li>avataaars1.png</li>
+        </ul>
+    </div>
+</body>
+</html>

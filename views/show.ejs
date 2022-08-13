@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs") %>
+
+<body>
+    <div>
+        <h1><%=mission.target%></h1>
+        <h3>Your mission: <%=mission.description%></h3>
+        <a href="/missions"><button type="button">Back to the board</button></a>
+    </div>        
+            <div class="wanted-image">
+                <div class="">
+                    <img class="item-img" src="<%=mission.image%>">
+                    <h3><%=mission.description%></h3>
+                    <div> Completed: <%=mission.completed %></div>
+                </div>
+            </div>
+    <div class="page-control">
+        <a href="/missions/<%=mission._id%>/edit"><button type="button">Edit Mission</button></a>
+    </div>
+    <form action="/missions/<%=mission._id%>?_method=DELETE" method="post">
+        <input type="submit" value="Archive Mission">
+    </form>
+</body>
+</html>

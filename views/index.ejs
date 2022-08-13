@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs") %>
+
+<body>
+    <div class="grid">
+        <div class="item-header">
+            <h1>Atlas Network</h1>
+            <a href="/missions/new"><button type="button">Post a new mission</button></a>
+        </div>
+        <% missions.forEach(mission => {%>
+            <div class="item-container">
+                <div class="item-details">
+                    <a href="missions/<%=mission._id%>"><img class="item-img" src="<%=mission.image%>"></a>
+                    <h3><%=mission.target%></h3>
+                </div>
+            </div>
+        <%})%>
+    </div>
+</body>
+</html>
